@@ -273,10 +273,7 @@ if __name__ == '__main__':
 
             # Get result image and display
             # st.text("Abriendo {}".format(results_path[-1]+uploaded_file.name[:-4]+"_fused.png"))
-            print(results_path)
-            print(results_path[-1])
             result_image = cv.imread(
                 results_path[-1]+uploaded_file.name[:-4]+"_fused.png")
-            print(result_image)
             st.image(result_image, caption='Output image',
                      channels="BGR", use_column_width=True)

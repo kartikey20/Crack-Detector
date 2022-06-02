@@ -13,7 +13,7 @@ email = \"\"\n\
 
 RUN bash -c 'echo -e "\
 [server]\n\
-enableCORS = false\n\
+enableCORS = true\n\
 " > ~/.streamlit/config.toml'
 
 # install Python and Pip
@@ -47,4 +47,4 @@ COPY . .
 RUN gdown --id 12-iXK656aGUIWCtN9gb0Ko7qotyn9ZcI -O myapp/DeepSegmentor/checkpoints/deepcrack/latest_net_G.pth
 
 # launch streamlit app --server.enableCORS false
-CMD streamlit run --server.port $PORT app.py
+CMD streamlit run --server.port 8501 app.py
